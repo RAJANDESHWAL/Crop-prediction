@@ -1,0 +1,47 @@
+{
+  "selected_model": "Linear SVR",
+  "target_column": "Target_Price_7d",
+  "forecast_horizon_days": 7,
+  "target_definition": "Modal price exactly 7 calendar days after Price Date; no substitution with next available observation",
+  "feature_columns": [
+    "Lag_1",
+    "Lag_7",
+    "Lag_14",
+    "Lag_30",
+    "Rolling_Mean_7",
+    "Rolling_Mean_14",
+    "Rolling_Mean_30",
+    "Rainfall_mm",
+    "Max_Temp_C",
+    "Min_Temp_C",
+    "State",
+    "District Name",
+    "Market Name",
+    "Commodity"
+  ],
+  "numeric_columns_scaled": [
+    "Lag_1",
+    "Lag_7",
+    "Lag_14",
+    "Lag_30",
+    "Rolling_Mean_7",
+    "Rolling_Mean_14",
+    "Rolling_Mean_30",
+    "Rainfall_mm",
+    "Max_Temp_C",
+    "Min_Temp_C"
+  ],
+  "categorical_columns_encoded": [
+    "State",
+    "District Name",
+    "Market Name",
+    "Commodity"
+  ],
+  "training_rows": 142289,
+  "training_start_date": "2024-09-14",
+  "training_end_date": "2025-08-07",
+  "backtesting_mean_mae": 222.69019198617391,
+  "backtesting_mean_rmse": 532.7383813284395,
+  "backtesting_mean_r2": 0.9750680348138222,
+  "note": "Weather features are historical same-day observations. A live forecast workflow must define how weather features will be available at prediction time."
+}
